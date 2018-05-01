@@ -1,6 +1,6 @@
 ﻿namespace ClientDataWiz.Models
 {
-    public class ControlValidate
+    public class ControlValidation
     {
         public bool FirstName { get; set; }
         public bool LastName { get; set; }
