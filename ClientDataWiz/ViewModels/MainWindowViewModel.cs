@@ -94,11 +94,21 @@ namespace ClientDataWiz.ViewModels
 
         public MainWindowViewModel()
         {
+            Controls = new ObservableCollection<ControlViewModel>
+            {
+                new FirstPageViewModel(),
+                new FirstNameViewModel(),
+                new LastNameViewModel(),
+                new AddressViewModel(),
+                new PhoneViewModel(),
+                new LastPageViewModel()
+            };
+
             Prev = new RelayCommand(obj => PrevControl(), IsPrevCorrect);
             Next = new RelayCommand(obj => NextControl(), IsNextCorrect);
             Cancel = new RelayCommand(obj => CancelApplication(), IsCancelPossible);
 
-            CurrViewModel = Controls[0]; //will be null
+            CurrViewModel = Controls[0];
             IsPrevEnabled = IsNextEnabled = IsCancelEnabled = true;
             NextBtn = "Next";
         }
@@ -136,7 +146,7 @@ namespace ClientDataWiz.ViewModels
             Application.Current.Shutdown();
         }
 
-        public static T NextElement<T>(ObservableCollection<T> list, T item)
+        public static ControlViewModel NextElement(ObservableCollection<ControlViewModel> list, ControlViewModel item)
         {
             if (User == null)
             {
@@ -150,7 +160,7 @@ namespace ClientDataWiz.ViewModels
 
             return list[list.IndexOf(item) + 1 == list.Count ? 0 : list.IndexOf(item) + 1];
         }
-        public static T PrevElement<T>(ObservableCollection<T> list, T item)
+        public static ControlViewModel PrevElement(ObservableCollection<ControlViewModel> list, ControlViewModel item)
         {
             return list[list.IndexOf(item) - 1 == -1 ? 0 : list.IndexOf(item) - 1];
         }
