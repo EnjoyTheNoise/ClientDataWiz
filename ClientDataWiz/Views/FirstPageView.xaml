@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="ClientDataWiz.Views.FirstPageView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" >
+
+    <StackPanel Loaded="ControlLoaded">
+
+        <Label Style="{StaticResource InputLabel}" Content="Let's play a game" />
+        <TextBlock Style="{StaticResource Description}">
+            You give us your contact info and we promise not to sell it.<LineBreak />
+            Fair deal, right?
+        </TextBlock>
+
+    </StackPanel>
+</UserControl>
