@@ -6,10 +6,10 @@ namespace ClientDataWiz.ViewModels
     {
         public string FirstName => User.FirstName;
         public string LastName => User.LastName;
-        public string AddressStreet => User.Street;
-        public string AddressPostCode => User.ZipCode;
-        public string AddressCity => User.City;
-        public string PhoneNumber => User.Phone;
+        public string Street => User.Street;
+        public string ZipCode => User.ZipCode;
+        public string City => User.City;
+        public string Phone => User.Phone;
         public override string UserData { get; set; }
         protected override bool FieldValidation(int fieldType = 0)
         {

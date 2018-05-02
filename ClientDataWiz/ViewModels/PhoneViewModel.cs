@@ -18,7 +18,7 @@ namespace ClientDataWiz.ViewModels
         protected override bool FieldValidation(int type = 0)
         {
             var pattern = new Regex(@"^(?<!\w)(\(?(\+|00)?48\)?)?[ -]?\d{3}[ -]?\d{3}[ -]?\d{3}(?!\w)?");
-            return ValidateRegexPattern(pattern, User.Phone, "Invalid phone number. Only numbers and '+' allowed");
+            return ValidateRegexPattern(pattern, User.Phone, "Invalid phone number. Only numbers and '+' are allowed");
         }
     }
 }
