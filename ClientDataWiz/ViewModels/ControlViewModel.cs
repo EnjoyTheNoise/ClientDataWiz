@@ -40,7 +40,8 @@ namespace ClientDataWiz.ViewModels
             }
             else if (field.Length >= max || field.Length <= min)
             {
-                ShowErrorOnChange("Error: "+ fieldName + " length is not correct! (between " + min + "-" + max + " characters)");
+                ShowErrorOnChange("Error: " + fieldName + " length is not correct! (between " + min + "-" + max +
+                                  " characters)");
                 isLengthValid = false;
             }
             else

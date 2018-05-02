@@ -20,6 +20,7 @@ namespace ClientDataWiz.Views
             LastName.Focus();
             LastName.Focusable = true;
             Keyboard.Focus(LastName);
+
             MainWindowViewModel.IsNextEnabled = MainWindowViewModel.ControlValidation.LastName;
         }
     }

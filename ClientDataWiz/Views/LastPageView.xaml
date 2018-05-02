@@ -1,8 +1,6 @@
 ﻿<UserControl x:Class="ClientDataWiz.Views.LastPageView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" >
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <StackPanel>
         <Label Style="{StaticResource InputLabel}" Content="Summary:" />
@@ -24,20 +22,26 @@
             </Grid.RowDefinitions>
 
             <Label Style="{StaticResource SummaryLabel}" Content="First Name:" Grid.Row="1" Grid.Column="0" />
-            <TextBlock Style="{StaticResource SummaryTextBlock}" x:Name="FirstName" Text="{Binding FirstName, Mode=OneWay}" Grid.Row="1" Grid.Column="1" />
+            <TextBlock Style="{StaticResource SummaryTextBlock}" x:Name="FirstName"
+                       Text="{Binding FirstName, Mode=OneWay}" Grid.Row="1" Grid.Column="1" />
 
             <Label Style="{StaticResource SummaryLabel}" Content="Last Name:" Grid.Row="2" Grid.Column="0" />
-            <TextBlock Style="{StaticResource SummaryTextBlock}" x:Name="LastName" Text="{Binding LastName, Mode=OneWay}" Grid.Row="2" Grid.Column="1" />
+            <TextBlock Style="{StaticResource SummaryTextBlock}" x:Name="LastName"
+                       Text="{Binding LastName, Mode=OneWay}" Grid.Row="2" Grid.Column="1" />
 
             <Label Style="{StaticResource SummaryLabel}" Content="Address:" Grid.Row="3" Grid.Column="0" />
-            <TextBlock Style="{StaticResource SummaryTextBlock}" x:Name="AdressStreet" Text="{Binding Street, Mode=OneWay}" Grid.Row="3" Grid.Column="1" />
-            <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="1" >
-                <TextBlock Style="{StaticResource SummaryTextBlock}" x:Name="AdressPostCode" Text="{Binding ZipCode, Mode=OneWay}" />
-                <TextBlock Style="{StaticResource SummaryTextBlock}" x:Name="AdressCity" Text="{Binding City, Mode=OneWay}"/>
+            <TextBlock Style="{StaticResource SummaryTextBlock}" x:Name="AdressStreet"
+                       Text="{Binding Street, Mode=OneWay}" Grid.Row="3" Grid.Column="1" />
+            <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="1">
+                <TextBlock Style="{StaticResource SummaryTextBlock}" x:Name="AdressPostCode"
+                           Text="{Binding ZipCode, Mode=OneWay}" />
+                <TextBlock Style="{StaticResource SummaryTextBlock}" x:Name="AdressCity"
+                           Text="{Binding City, Mode=OneWay}" />
             </StackPanel>
 
             <Label Style="{StaticResource SummaryLabel}" Content="Phone Number:" Grid.Row="6" Grid.Column="0" />
-            <TextBlock Style="{StaticResource SummaryTextBlock}" x:Name="PhoneNumber" Text="{Binding Phone, Mode=OneWay}" Grid.Row="6" Grid.Column="1" />
+            <TextBlock Style="{StaticResource SummaryTextBlock}" x:Name="PhoneNumber"
+                       Text="{Binding Phone, Mode=OneWay}" Grid.Row="6" Grid.Column="1" />
 
         </Grid>
     </StackPanel>

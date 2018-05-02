@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace ClientDataWiz.Helpers
@@ -22,6 +18,7 @@ namespace ClientDataWiz.Helpers
             _execute = execute;
             _canExecute = canExecute;
         }
+
         public bool CanExecute(object parameter)
         {
             return _canExecute?.Invoke(parameter) ?? true;

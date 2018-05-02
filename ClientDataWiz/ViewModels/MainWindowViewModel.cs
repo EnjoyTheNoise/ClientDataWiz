@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Windows;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using ClientDataWiz.Helpers;
 using ClientDataWiz.Models;
@@ -29,6 +24,7 @@ namespace ClientDataWiz.ViewModels
         public ICommand Cancel { get; }
 
         public string NextBtn { get; set; }
+
         public static bool IsNextEnabled
         {
             get => _isNextEnabled;
@@ -83,10 +79,12 @@ namespace ClientDataWiz.ViewModels
         {
             return IsNextEnabled;
         }
+
         public bool IsPrevCorrect(object state)
         {
             return IsPrevEnabled;
         }
+
         public bool IsCancelPossible(object state)
         {
             return IsCancelEnabled;
@@ -124,6 +122,7 @@ namespace ClientDataWiz.ViewModels
                 NextBtn = "Finish";
                 OnPropertyChanged("NextBtn");
             }
+
             if (!IsPrevEnabled) IsPrevEnabled = true;
             CurrViewModel = NextElement(Controls, CurrViewModel);
         }
@@ -136,6 +135,7 @@ namespace ClientDataWiz.ViewModels
                 NextBtn = "Next";
                 OnPropertyChanged("NextBtn");
             }
+
             OnPropertyChanged("IsPrevEnabled");
 
             CurrViewModel = PrevElement(Controls, CurrViewModel);
@@ -160,6 +160,7 @@ namespace ClientDataWiz.ViewModels
 
             return list[list.IndexOf(item) + 1 == list.Count ? 0 : list.IndexOf(item) + 1];
         }
+
         public static ControlViewModel PrevElement(ObservableCollection<ControlViewModel> list, ControlViewModel item)
         {
             return list[list.IndexOf(item) - 1 == -1 ? 0 : list.IndexOf(item) - 1];

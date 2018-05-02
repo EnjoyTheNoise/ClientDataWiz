@@ -6,8 +6,8 @@
         xmlns:views="clr-namespace:ClientDataWiz.Views"
         xmlns:viewModels="clr-namespace:ClientDataWiz.ViewModels"
         mc:Ignorable="d"
-        Title="PGS Software Internship" 
-        MinWidth="500" MinHeight="300" Width="600" Height="400" MaxWidth="1000" MaxHeight="800" 
+        Title="PGS Software Internship"
+        MinWidth="500" MinHeight="300" Width="600" Height="400" MaxWidth="1000" MaxHeight="800"
         ResizeMode="CanResize">
 
     <Window.Resources>
@@ -34,8 +34,11 @@
     <DockPanel>
         <StackPanel DockPanel.Dock="Top">
             <Label Style="{StaticResource WindowTitle}" Content="Welcome!" />
-            <TextBlock Style="{StaticResource WindowDescription}">This app will collect basic contact information about you. <Italic>Not shady at all.</Italic><LineBreak/>
-                <Bold>All fields are required!</Bold></TextBlock>
+            <TextBlock Style="{StaticResource WindowDescription}">
+                This app will collect basic contact information about you. <Italic>Not shady at all.</Italic>
+                <LineBreak />
+                <Bold>All fields are required!</Bold>
+            </TextBlock>
             <Separator />
         </StackPanel>
 
@@ -52,9 +55,12 @@
             </Grid.ColumnDefinitions>
 
             <Separator Grid.ColumnSpan="4" />
-            <Button IsEnabled="{Binding IsCancelEnabled}" Command="{Binding Path=Cancel}" Content="Cancel" FontWeight="DemiBold" Grid.Row="1" Grid.Column="0"/>
-            <Button IsEnabled="{Binding IsPrevEnabled}" Command="{Binding Path=Prev}" Content="Prev" Grid.Row="1" Grid.Column="2"/>
-            <Button IsEnabled="{Binding IsNextEnabled}" Command="{Binding Path=Next}" IsDefault="true" Content="{Binding NextBtn}" Grid.Row="1" Grid.Column="3" />
+            <Button IsEnabled="{Binding IsCancelEnabled}" Command="{Binding Path=Cancel}" Content="Cancel"
+                    FontWeight="DemiBold" Grid.Row="1" Grid.Column="0" />
+            <Button IsEnabled="{Binding IsPrevEnabled}" Command="{Binding Path=Prev}" Content="Prev" Grid.Row="1"
+                    Grid.Column="2" />
+            <Button IsEnabled="{Binding IsNextEnabled}" Command="{Binding Path=Next}" IsDefault="true"
+                    Content="{Binding NextBtn}" Grid.Row="1" Grid.Column="3" />
         </Grid>
 
         <StackPanel Style="{StaticResource Pages}">

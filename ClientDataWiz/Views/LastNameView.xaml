@@ -1,15 +1,16 @@
 ﻿<UserControl x:Class="ClientDataWiz.Views.LastNameView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" Loaded="ControlLoaded" >
+             Loaded="ControlLoaded">
 
     <StackPanel Loaded="ControlLoaded">
         <TextBlock Style="{StaticResource Description}">
             Enter your last name.
         </TextBlock>
-        <Label Style="{StaticResource InputLabel}" Content="Last Name:"/>
-        <TextBox Style="{StaticResource Input}" x:Name="LastName" Text="{Binding UserData, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-        <TextBlock Style="{StaticResource ErrorTextBlock}" Text="{ Binding ErrorDesc }" Visibility="{ Binding ShowError }"/>
+        <Label Style="{StaticResource InputLabel}" Content="Last Name:" />
+        <TextBox Style="{StaticResource Input}" x:Name="LastName"
+                 Text="{Binding UserData, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+        <TextBlock Style="{StaticResource ErrorTextBlock}" Text="{ Binding ErrorDesc }"
+                   Visibility="{ Binding ShowError }" />
     </StackPanel>
 </UserControl>
